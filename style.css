@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+/* font-family: 'Big Shoulders Display', cursive;
+font-family: 'Lexend Deca', sans-serif; */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --color-bg-card-1: hsl(31, 77%, 52%);
+  --color-bg-card-2: hsl(184, 100%, 22%);
+  --color-bg-card-3: hsl(179, 100%, 13%);
+
+  --color-btn-link-card-1: hsl(31, 77%, 52%);
+  --color-btn-link-card-2: hsl(184, 100%, 22%);
+  --color-btn-link-card-3: hsl(179, 100%, 13%);
+  --color-btn-link-hover: hsl(0, 0%, 95%);
+
+  --color-title: hsl(0, 0%, 95%);
+  --color-desc: hsla(0, 0%, 100%, 0.75);
+  --color-bg-btn-link: hsl(0, 0%, 95%);
+}
+body {
+  font-size: 15px;
+  background-color: hsl(0, 0%, 95%);
+}
+
+.container-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 5.5rem 1.5rem;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 3rem 3.05rem;
+}
+.icon-card {
+  height: 40px;
+  width: 64px;
+}
+.title-card {
+  text-transform: uppercase;
+  font-family: 'Big Shoulders Display', cursive;
+  font-size: 40px;
+  color: var(--color-title);
+  margin-top: 2.2rem;
+}
+.desc-card {
+  font-family: 'Lexend Deca', sans-serif;
+  color: var(--color-desc);
+  margin-top: 1.53rem;
+  line-height: 1.58rem;
+}
+.bnt-link {
+  font-family: 'Lexend Deca', sans-serif;
+  text-decoration: none;
+  background-color: var(--color-bg-btn-link);
+  margin-top: 1.5rem;
+  padding: 0.9rem 2rem;
+  border-radius: 2rem;
+  border: 2px solid var(--color-bg-btn-link);
+}
+.card .bnt-link:hover {
+  background-color: transparent;
+  border: 2px solid var(--color-bg-btn-link);
+  color: var(--color-btn-link-hover);
+}
+/*--------------------------cards--------------*/
+.card-1 {
+  background-color: var(--color-bg-card-1);
+  border-radius: 0.5rem 0.5rem 0rem 0rem;
+}
+.card-2 {
+  background-color: var(--color-bg-card-2);
+}
+.card-3 {
+  background-color: var(--color-bg-card-3);
+  border-radius: 0rem 0rem 0.5rem 0.5rem;
+}
+.card-1 .bnt-link {
+  color: var(--color-btn-link-card-1);
+}
+.card-2 .bnt-link {
+  color: var(--color-btn-link-card-2);
+}
+.card-3 .bnt-link {
+  color: var(--color-btn-link-card-3);
+}
+
+@media screen and (min-width: 360px) {
+  .container-card {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (min-width: 360px) {
+  .container-card {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card-1 {
+    border-radius: 0.5rem 0rem 0rem 0rem;
+  }
+  .card-2 {
+    border-radius: 0rem 0.5rem 0.5rem 0rem;
+  }
+  .card-3 {
+    border-radius: 0rem 0rem 0.5rem 0.5rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .container-card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 10rem 16rem;
+  }
+  .bnt-link {
+    font-family: 'Lexend Deca', sans-serif;
+    text-decoration: none;
+    background-color: var(--color-bg-btn-link);
+    margin-top: 5rem;
+    padding: 0.9rem 2rem;
+    border-radius: 2rem;
+  }
+  .card-1 {
+    border-radius: 0.5rem 0rem 0rem 0.5rem;
+  }
+  .card-2 {
+    border-radius: 0rem;
+  }
+  .card-3 {
+    border-radius: 0rem 0.5rem 0.5rem 0rem;
+  }
+}
